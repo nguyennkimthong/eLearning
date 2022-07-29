@@ -1,0 +1,191 @@
+/*.container {*/
+/*    padding-top: 120px;*/
+/*    padding-bottom: 120px;*/
+/*}*/
+
+.input-daterange input {
+    height: 42px;
+    /*padding: 16px 8px !important;*/
+    border: 1px solid #1D93CD !important;
+    border-radius: 0;
+    box-sizing: border-box;
+    background-color: transparent !important;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    color: #1D93CD !important;
+    font-size: 16px !important;
+    letter-spacing: 1px;
+    position: relative;
+    font-weight: 600 !important;
+    font-family: 'Inter',sans-serif;
+    font-style: normal;
+}
+.input-daterange input::placeholder {
+    color: #1D93CD!important;
+}
+
+.input1 {
+    text-align: left !important;
+    width: 0!important;
+    padding-left: 12px!important;
+}
+
+.input2 {
+    text-align: right !important;
+    border-left: none!important;
+    padding-right: 12px!important;
+}
+
+.input-daterange input:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #512DA8;
+    outline-width: 0;
+}
+
+::placeholder {
+    color: #BDBDBD;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: #BDBDBD;
+}
+
+::-ms-input-placeholder {
+    color: #BDBDBD;
+}
+
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0;
+}
+
+.datepicker {
+    padding: 32px 16px 24px 16px!important;
+    gap: 8px;
+    align-content: center !important;
+    background: #F4F4F4;
+    box-shadow: 4px 8px 24px rgb(23 22 22 / 8%);
+    border-radius: 12px!important;
+}
+
+.datepicker-dropdown {
+    top: 0;
+    left: calc(80% - 136px) !important;
+}
+
+.datepicker-dropdown.datepicker-orient-left:before {
+    left: calc(50% - 6px) !important;
+}
+
+.datepicker-dropdown.datepicker-orient-left:after {
+    left: calc(50% - 5px) !important;
+}
+
+.datepicker table tr td.
+
+
+, span.focused {
+    border-radius: 50% !important;
+    background-image: linear-gradient(#1D93CD, #1D93CD);
+}
+
+.datepicker table tr td.today.range {
+    background-image: linear-gradient(#1D93CD, #1D93CD) !important;
+    border-radius: 0 !important;
+}
+
+/*Weekday title*/
+thead tr:nth-child(3) th {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-family: 'Inter',sans-serif;
+    font-style: normal;
+    font-weight: 600!important;
+    font-size: 14px;
+    line-height: 16px;
+    color: #3F4346;
+}
+
+.old, .day, .new {
+    width: 36px !important;
+    height: 32px !important;
+    border-radius: 0 !important;
+    /*border: 1px solid lightgrey !important;*/
+    font-family: 'Inter',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #565A5D;
+}
+
+.day.old, .day.new {
+    background-color: #F5F5F5 !important;
+    color: #E0E0E0 !important;
+}
+
+.day.old:hover, .day.new:hover {
+    border-radius: 0 !important;
+}
+
+.old-day:hover, .day:hover, .new-day:hover, .month:hover, .year:hover, .decade:hover, .century:hover {
+    border-radius: 4px!important;
+    background-color: #eee;
+}
+
+/*.active {*/
+/*    border-radius: 50% !important;*/
+/*    background-image: linear-gradient(#90CAF9, #64B5F6) !important;*/
+/*    color: #fff !important;*/
+/*}*/
+
+.range-start, .range-end {
+    border-radius: 4px !important;
+    background-image: linear-gradient(#3F4346, #3F4346) !important;
+}
+
+.range {
+    color: #565A5D !important;
+}
+
+.prev, .next, .datepicker-switch {
+    border-radius: 0 !important;
+    padding: 0 10px 20px 10px !important;
+    opacity: 1;
+    font-family: 'Inter',sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #3F4346;
+    border-bottom: 1px solid #E0E0E0!important;
+}
+
+.prev:hover, .next:hover, .datepicker-switch:hover {
+    background-color: inherit !important;
+    opacity: 1;
+}
+
+@media screen and (max-width: 500px) {
+    .datepicker-dropdown.datepicker-orient-right:before {
+        right: calc(50% - 6px) !important;
+    }
+
+    .datepicker-dropdown.datepicker-orient-right:after {
+        right: calc(50% - 5px) !important;
+    }
+}
+.input-group{
+    width: 125px!important;
+}
+.form-control{
+    padding: 0;
+}
+.custom_border{
+    border-right: none!important;
+}

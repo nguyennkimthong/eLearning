@@ -1,0 +1,257 @@
+#container {
+  height: auto;
+}
+
+.highcharts-figure,
+.highcharts-data-table table {
+  min-width: 310px;
+  max-width: 810px;
+  margin: 0 auto;
+}
+
+.highcharts-data-table table {
+  font-family: Verdana, sans-serif;
+  border-collapse: collapse;
+  border: 1px solid #ebebeb;
+  margin: 10px auto;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.highcharts-data-table caption {
+  padding: 1em 0;
+  font-size: 1.2em;
+  color: #555;
+}
+
+.highcharts-data-table th {
+  font-weight: 600;
+  padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+  padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+  background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+  background: #f1f7ff;
+}
+
+.highcharts-xaxis-grid .highcharts-grid-line {
+  stroke-width: 1.2px;
+  stroke: #DBDBDB;
+}
+
+
+.highcharts-yaxis-grid .highcharts-grid-line {
+  stroke-width: 1.2px;
+  stroke: #DBDBDB;
+}
+
+.highcharts-minor-grid-line {
+  stroke-dasharray: 2, 2;
+}
+
+.highcharts-background {
+  fill: #F4F4F4 !important;
+}
+
+//custom with thong
+.highcharts-legend {
+  display: none;
+
+  .highcharts-legend-item {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    .highcharts-point {
+      y: 0 !important;
+      display: none;
+    }
+
+    .highcharts-tooltip text {
+      font-family: 'Inter', sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px !important;
+      line-height: 24px;
+      fill: #3F4346 !important;
+      color: #3F4346 !important;
+      padding-left: 8px !important;
+    }
+  }
+
+  .highcharts-legend-item-hidden {
+    text {
+      color: rgb(28, 31, 34) !important;
+      fill: rgb(28, 31, 34) !important;
+    }
+  }
+}
+
+//charts
+.highcharts_legend_custom {
+  margin-top: -32px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+
+  h4 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+
+    .container {
+      display: block;
+      position: relative;
+      padding-right: 64px;
+      padding-left: 36px;
+      margin-bottom: 0;
+      cursor: pointer;
+      width: max-content;
+
+      height: 24px;
+      font-family: 'Inter', sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      color: #1C1F22;
+
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .container:last-child {
+      padding-right: 0;
+    }
+
+    /* Hide the browser's default checkbox */
+    .container input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+
+    /* Create a custom checkbox */
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 24px;
+      width: 24px;
+      border-radius: 4px;
+      background-color: #DBDBDB;
+    }
+
+    /* On mouse-over, add a grey background color */
+    .container:hover input ~ .checkmark {
+      background-color: #ccc;
+    }
+
+    /* When the checkbox is checked, add a blue background */
+    .container input:checked ~ .checkmark0 {
+      background-color: #1D93CD;
+    }
+
+    /* When the checkbox is checked, add a blue background */
+    .container input:checked ~ .checkmark1 {
+      background-color: #E16565;
+    }
+
+    /* When the checkbox is checked, add a blue background */
+    .container input:checked ~ .checkmark2 {
+      background-color: #11A829;
+    }
+
+    /* Create the checkmark/indicator (hidden when not checked) */
+    .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+
+    /* Show the checkmark when checked */
+    .container input:checked ~ .checkmark:after {
+      display: block;
+    }
+
+    /* Style the checkmark/indicator */
+    .container .checkmark:after {
+      left: 9px;
+      top: 5px;
+      width: 6px;
+      height: 10px;
+      border: solid #FAFAFA;
+      border-width: 0 2px 2px 0;
+      -ms-transform: rotate(45deg);
+      border-radius: 2px;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .highcharts_legend_custom {
+    h4 {
+      padding: 0 25px 0 80px;
+
+      .container {
+        padding-right: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .highcharts_legend_custom {
+    padding-bottom: 20px;
+    justify-content: center;
+
+    h4 {
+      flex-direction: column;
+
+      .container {
+        margin-bottom: 0.5rem;
+        padding-right: 0;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.tooltip_custom {
+  .box_tooltip {
+
+  }
+
+  .text_tooltip {
+
+  }
+}
+.tooltip_custom:last-child{
+  padding-bottom: 0!important;
+}
+
+.highcharts-tooltip {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+

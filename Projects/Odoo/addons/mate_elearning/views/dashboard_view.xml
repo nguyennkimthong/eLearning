@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+        <record id="action_mate_elearning_dashboard" model="ir.actions.client">
+            <field name="name">Elearning</field>
+            <field name="tag">mate_elearning</field>
+        </record>
+
+        <menuitem name="Dashboard" id="menu_mate_elearning_dashboard_new"
+                  parent="website_slides.website_slides_menu_root"
+                  sequence="0" action="action_mate_elearning_dashboard"/>
+
+        <menuitem id="website_slides.website_slides_menu_root" action="action_mate_elearning_dashboard"/>
+
+    </data>
+</odoo>

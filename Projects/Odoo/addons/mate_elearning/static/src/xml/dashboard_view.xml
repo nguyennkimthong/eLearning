@@ -1,0 +1,1426 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+    <t t-name="OMDashboard">
+         <div class="oh_dashboards">
+            <div class="container-fluid my-5 o_hr_dashboard container-custom"/>
+        </div>
+    </t>
+    <t t-name="dashboard">
+        <div class="row overview_title">
+            <div class="col-md-5 col-lg-5 col-sm-6 col-7">
+                <h3>Tổng quản</h3>
+            </div>
+            <div class="col-md-7 col-lg-7 col-sm-6 col-5 col_select_date">
+                <div class="btn-group btn-group-toggle float-right d-none d-md-flex" id="income_expense_values"
+                     data-toggle="buttons">
+                    <label class="btn btn-sm date_btn btn-simple active">
+                        <input value="this_week" type="radio" name="options"/>
+                        <span>Tuần</span>
+                    </label>
+                    <label class="btn btn-sm date_btn btn-simple" id="1">
+                        <input value="this_month" type="radio" name="options"/>
+                        <span>Tháng</span>
+                    </label>
+                    <label class="btn btn-sm date_btn btn-simple" id="2">
+                        <input value="this_quarter" type="radio" name="options"/>
+                        <span>Quý</span>
+                    </label>
+                    <label class="btn btn-sm border-right-0 date_btn btn-simple" id="3">
+                        <input value="this_year" type="radio" name="options"/>
+                        <span>Năm</span>
+                    </label>
+<!--                    <label class="btn btn-sm date_btn btn-simple" id="4">-->
+<!--                        <input type="radio" name="options"/>-->
+<!--                        <span>Giai đoạn</span>-->
+<!--                    </label>-->
+                    <div class="">
+                  <form autocomplete="off">
+                    <div class="flex-row d-flex justify-content-center">
+                      <div class="">
+                        <div class="input-group input-daterange">
+                          <input type="text" class="custom_border form-control input1" placeholder="Giai -"/>
+                          <input type="text" class="form-control input2" placeholder="Đoạn" />
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                </div>
+
+                <div class="float-right d-md-none d-lg-none custom">
+                    <select class="form-select" aria-label="Default select example" id="income_expense_values">
+                        <option value="this_week">Tuần</option>
+                        <option value="this_month">Tháng</option>
+                        <option value="this_quarter">Quý</option>
+                        <option value="this_year">Năm</option>
+                        <option value="4">Giai đoạn</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-8 col-lg-12 col-md-12">
+                        <div class="row">
+                        <!--Tổng người dùng-->
+                            <div class="col-md-6 col_card">
+                                <div class="card_box">
+                                    <div class="card_content">
+                                        <img src="mate_elearning/static/description/Frame 1555.svg"/>
+                                        <div class="content_title">
+                                            <h3>Tổng người dùng</h3>
+                                        </div>
+                                        <div class="big">
+                                            <img src="mate_elearning/static/description/Vector.svg"/>
+                                            <div class="small">
+                                                <img src="mate_elearning/static/description/Vector.svg"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card_number" id="total_user">
+                                        <h3></h3>
+                                        <div class="number_box">
+                                            <div class="icon_number">
+                                                <img class="green"
+                                                     src="mate_elearning/static/description/Vector 69.png"/>
+                                                <img class="red" src="mate_elearning/static/description/Vector 71.png"/>
+                                            </div>
+                                            <p class="total_user_growth"></p>
+                                        </div>
+                                    </div>
+                                    <div class="card_global">
+                                        <img src="mate_elearning/static/description/Vector (2).png"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col_card">
+                                <div class="card_box">
+                                    <div class="card_content">
+                                        <img src="mate_elearning/static/description/Frame 1555 (1).svg"/>
+                                        <div class="content_title">
+                                            <h3>Giảng viên</h3>
+                                        </div>
+                                        <div class="big">
+                                            <img src="mate_elearning/static/description/Vector (7).png"/>
+                                            <div class="small">
+                                                <img src="mate_elearning/static/description/Vector (7).png"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card_number">
+                                            <h3>24</h3>
+                                        <div class="number_box">
+                                                <div class="icon_number">
+                                                    <img src="mate_elearning/static/description/Vector 69.svg"/>
+                                                </div>
+                                            <p>12%</p>
+                                            </div>
+                                    </div>
+                                    <div class="card_global">
+                                        <img src="mate_elearning/static/description/Vector (2).png"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Khóa học-->
+                            <div class="col-md-6 col_card">
+                                <div class="card_box">
+                                    <div class="card_content">
+                                        <img src="mate_elearning/static/description/Frame 1557.svg"/>
+                                        <div class="content_title">
+                                            <h3>Khóa học</h3>
+                                        </div>
+                                        <div class="big">
+                                            <img src="mate_elearning/static/description/Vector (5).png"/>
+                                            <div class="small">
+                                                <img src="mate_elearning/static/description/Vector (5).png"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card_number" id="course">
+                                        <h3></h3>
+                                        <div class="number_box">
+                                            <div class="icon_number">
+                                                <img class="green"
+                                                     src="mate_elearning/static/description/Vector 69.png"/>
+                                                <img class="red" src="mate_elearning/static/description/Vector 71.png"/>
+                                            </div>
+                                            <p class="course_growth"></p>
+                                        </div>
+                                    </div>
+                                    <div class="card_global">
+                                        <img src="mate_elearning/static/description/Vector (2).png"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col_card">
+                                <div class="card_box">
+                                    <div class="card_content">
+                                        <img src="mate_elearning/static/description/Frame 1556.svg"/>
+                                        <div class="content_title">
+                                            <h3>Kỳ thi</h3>
+                                        </div>
+                                        <div class="big">
+                                            <img src="mate_elearning/static/description/Vector (8).png"/>
+                                            <div class="small">
+                                                <img src="mate_elearning/static/description/Vector (8).png"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card_number" id="survey_exam">
+                                        <h3></h3>
+                                        <div class="number_box">
+                                            <div class="icon_number">
+                                                <img class="green"
+                                                     src="mate_elearning/static/description/Vector 69.png"/>
+                                                <img class="red" src="mate_elearning/static/description/Vector 71.png"/>
+                                            </div>
+                                            <p class="survey_exam_growth"></p>
+                                        </div>
+                                    </div>
+                                    <div class="card_global">
+                                        <img src="mate_elearning/static/description/Vector (2).png"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col_card">
+                                <div class="card_box">
+                                    <div class="card_content">
+                                        <img src="mate_elearning/static/description/Frame 1559.svg"/>
+                                        <div class="content_title">
+                                            <h3>Câu hỏi</h3>
+                                        </div>
+                                        <div class="big">
+                                            <img src="mate_elearning/static/description/Vector (9).png"/>
+                                            <div class="small">
+                                                <img src="mate_elearning/static/description/Vector (9).png"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card_number" id="total_question">
+                                            <h3></h3>
+                                        <div class="number_box">
+                                                <div class="icon_number">
+                                                    <img src="mate_elearning/static/description/Vector 69.svg"/>
+                                                </div>
+                                            <p class="total_question_growth"></p>
+                                            </div>
+                                    </div>
+                                    <div class="card_global">
+                                        <img src="mate_elearning/static/description/Vector (2).png"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col_card">
+                                <div class="card_box">
+                                    <div class="card_content">
+                                        <img src="mate_elearning/static/description/Frame 1558.svg"/>
+                                        <div class="content_title">
+                                            <h3>Bài khảo sát</h3>
+                                        </div>
+                                        <div class="big">
+                                            <img src="mate_elearning/static/description/Vector (10).png"/>
+                                            <div class="small">
+                                                <img src="mate_elearning/static/description/Vector (10).png"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card_number" id="survey_survey">
+                                        <h3></h3>
+                                        <div class="number_box">
+                                            <div class="icon_number">
+                                                <img class="green"
+                                                     src="mate_elearning/static/description/Vector 69.png"/>
+                                                <img class="red" src="mate_elearning/static/description/Vector 71.png"/>
+                                            </div>
+                                            <p class="survey_survey_growth"></p>
+                                        </div>
+                                    </div>
+                                    <div class="card_global">
+                                        <img src="mate_elearning/static/description/Vector (2).png"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            <div class="col-xl-4 col-lg-12 col-md-12 col_calender col_card">
+                <div class="calender">
+<!--                    <div class="calender_add_event">-->
+                    <!--                        <span class="global"><img src="mate_elearning/static/description/Vector (3).png"/></span>-->
+                    <!--                        <div class="calender_title">-->
+                    <!--                            <h3>Lịch đào tạo</h3>-->
+                    <!--                            <p>Cập nhật lịch trình đào tạo để thoi dõi tiến trình tham gia của nhân viên</p>-->
+                    <!--                        </div>-->
+                    <!--                        <div class="calender_content">-->
+                    <!--                            <h4><img src="mate_elearning/static/description/calendar-schedule-add 1.png"/></h4>-->
+                    <!--                        </div>-->
+                    <!--                        <div class="calender_button">-->
+                    <!--                            <h4>-->
+                    <!--                                <div class="btn">-->
+                    <!--                                    <p>Thêm sự kiện</p>-->
+                    <!--                                </div>-->
+                    <!--                            </h4>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
+                    <div class="calender_show_event">
+                        <h1 class="text-center"><img src="mate_elearning/static/description/Mesa de trabajo 1@2x 2.svg"/></h1>
+                        <div class="card_header_calender d-flex justify-content center align-items-center">
+                            <h3 class="card_title_calender border_calender_right d-flex align-items-center flex-column">
+                                <span class="card_label_one">THỨ HAI</span>
+                                <span class="text_one">02</span>
+                            </h3>
+                            <h3 class="card_title_calender border_calender_left d-flex align-items-start flex-column">
+                                <span class="card_label_two">Tên sự kiện hôm nay</span>
+                                <span class="text_two">Nội dung sự kiện hôm nay</span>
+                            </h3>
+                        </div>
+                        <div class="card_body_calender">
+                            <div class="d-flex align-items-center content_one">
+                                <img src="mate_elearning/static/description/Frame 2102.svg"/>
+                                <div class="flex-grow-1 d-flex flex-column">
+                                    <span class="card_content_one">Thứ tư, 12/07/2022 - Thứ tư,12/07/2022</span>
+                                    <span class="text_content_one">8:00 12/07/2022 - 12:00 12/07/2022</span>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center content_two">
+                                <img src="mate_elearning/static/description/Frame 2103.svg"/>
+                                <span class="card_content_two">Mô tả vị trí</span>
+                            </div>
+                        </div>
+                        <div class="card_footer_calender">
+                            <div class="symbol-group symbol-hover">
+                                <div class="symbol symbol-circle symbol-36px">
+                                    <img src="mate_elearning/static/description/Ellipse 328.png"/>
+                                </div>
+                                <div class="symbol symbol-circle symbol-36px">
+                                    <img src="mate_elearning/static/description/Ellipse 329.png"/>
+                                </div>
+                                <div class="symbol symbol-circle symbol-36px">
+                                    <img src="mate_elearning/static/description/Ellipse 330.png"/>
+                                </div>
+                                <div class="symbol symbol-circle symbol-36px">
+                                    <div class="symbol-label bg-dark">
+                                        <span class="fs-9 text-white">+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-8 col-lg-12 col-md-12 col_card">
+                <div class="chart justify-content-between h-100">
+                    <div class="chart_header">
+                        <h3 class="m-0">Thống kê chung</h3>
+                        <span>7 ngày</span>
+                    </div>
+                    <div class="highcharts-figure">
+                        <div id="container">
+                        </div>
+                    </div>
+                    <div class="highcharts_legend_custom">
+                        <h4 style="text-align-center">
+                            <label class="container">Đăng nhập
+                            <input type="checkbox" id="check0" class="checkbox" checked="checked"/>
+                                <span class="checkmark checkmark0">
+
+                            </span>
+                        </label>
+                            <label class="container">Đăng ký
+                            <input type="checkbox" id="check1" class="checkbox" checked="checked"/>
+                                <span class="checkmark checkmark1">
+
+                            </span>
+                        </label>
+                            <label class="container">Hoàn thành khóa học
+                            <input type="checkbox" id="check2" class="checkbox" checked="checked"/>
+                                <span class="checkmark checkmark2">
+
+                            </span>
+                        </label>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" col-xl-4 col-lg-12 col-md-12 col_card">
+                <div class="ranking justify-content-between h-100">
+                    <div class="icon_global"><img src="mate_elearning/static/description/Vector (4).png"/></div>
+                    <div class="ranking_title">
+                        <h3>Bảng xếp hạng</h3>
+                        <p>Top 10 người tại phòng ban có điểm cao nhất</p>
+                    </div>
+                    <div class="ranking_content">
+                        <div class="card overflow-hidden">
+                            <div class="card-body p-0">
+                                <div class="table-responsive">
+                                    <table class="table table-dashboard mb-0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="align-middle text-end">
+                                                    <div class="union_img position-relative">
+                                                        <img class="union"
+                                                             src="mate_elearning/static/description/cup.5 1.png"/>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center position-relative content">
+                                                        <img src="mate_elearning/static/description/ranking_content_top1.png"/>
+                                                        <div class="flex-1 ms-3 text">
+                                                            <h6 class="mb-1">Darren Parisian</h6>
+                                                            <p class="mb-0">Product Program Liaison</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+                                                <td class="align-middle pe-card">
+                                                    <div class="d-flex align-items-center float-right percent">
+                                                        <div class="fw-semi-bold ms-2 content_percent">96942pt</div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="align-middle text-end">
+                                                    <div class="union_img position-relative">
+                                                        <img class="union"
+                                                             src="mate_elearning/static/description/cup.5 2.png"/>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center position-relative content">
+                                                        <img src="mate_elearning/static/description/content_top2.png"/>
+                                                        <div class="flex-1 ms-3 text">
+                                                            <h6 class="mb-1">Kristopher Lockman</h6>
+                                                            <p class="mb-0">Product Operations Supervisor</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+                                                <td class="align-middle pe-card">
+                                                    <div class="d-flex align-items-center float-right percent">
+                                                        <div class="fw-semi-bold ms-2 content_percent">92452pt</div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="align-middle text-end">
+                                                    <div class="union_img position-relative">
+                                                        <img class="union"
+                                                             src="mate_elearning/static/description/cup.5 3.png"/>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center position-relative content">
+                                                        <img src="mate_elearning/static/description/content_top3.png"/>
+                                                        <div class="flex-1 ms-3 text">
+                                                            <h6 class="mb-1">Alison Abbott Jr.</h6>
+                                                            <p class="mb-0">Global Response Representative</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+                                                <td class="align-middle pe-card">
+                                                    <div class="d-flex align-items-center float-right percent">
+                                                        <div class="fw-semi-bold ms-2 content_percent">86542pt</div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="align-middle text-end">
+                                                    <div class="union_img position-relative">
+                                                        <img class="union invisible"
+                                                             src="mate_elearning/static/description/Union_top2.png"/>
+                                                        <div class="number_union">
+                                                            4
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center position-relative content">
+                                                        <img src="mate_elearning/static/description/content_top_4.png"/>
+                                                        <div class="flex-1 ms-3 text">
+                                                            <h6 class="mb-1">Regina VonRueden</h6>
+                                                            <p class="mb-0">Chief Interactions Strategist</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+                                                <td class="align-middle pe-card">
+                                                    <div class="d-flex align-items-center float-right percent">
+                                                        <div class="fw-semi-bold ms-2 content_percent">96942pt</div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="align-middle text-end">
+                                                    <div class="union_img position-relative">
+                                                        <img class="union invisible"
+                                                             src="mate_elearning/static/description/Union_top2.png"/>
+                                                        <div class="number_union">
+                                                            5
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center position-relative content">
+                                                        <img src="mate_elearning/static/description/content_top_5.png"/>
+                                                        <div class="flex-1 ms-3 text">
+                                                            <h6 class="mb-1">Mrs. Jeannette Spencer</h6>
+                                                            <p class="mb-0">Investor Identity Technician</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+                                                <td class="align-middle pe-card">
+                                                    <div class="d-flex align-items-center float-right percent">
+                                                        <div class="fw-semi-bold ms-2 content_percent">78639pt</div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="align-middle text-end">
+                                                    <div class="union_img position-relative">
+                                                        <img class="union invisible"
+                                                             src="mate_elearning/static/description/6..png"/>
+                                                        <div class="number_union">
+                                                            6
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center position-relative content">
+                                                        <img src="mate_elearning/static/description/Ellipse 235.png"/>
+                                                        <div class="flex-1 ms-3 text">
+                                                            <h6 class="mb-1">Dominic Bernhard</h6>
+                                                            <p class="mb-0">District Operations Technician</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+                                                <td class="align-middle pe-card">
+                                                    <div class="d-flex align-items-center float-right percent">
+                                                        <div class="fw-semi-bold ms-2 content_percent">72345pt</div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="align-middle text-end">
+                                                    <div class="union_img position-relative">
+                                                        <img class="union invisible"
+                                                             src="mate_elearning/static/description/Union_top2.png"/>
+                                                        <div class="number_union">
+                                                            7
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center position-relative content">
+                                                        <img src="mate_elearning/static/description/Ellipse 235 (1).png"/>
+                                                        <div class="flex-1 ms-3 text">
+                                                            <h6 class="mb-1">Michele Oberbrunner</h6>
+                                                            <p class="mb-0">Senior Applications Orchestrator</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+                                                <td class="align-middle pe-card">
+                                                    <div class="d-flex align-items-center float-right percent">
+                                                        <div class="fw-semi-bold ms-2 content_percent">69972pt</div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="align-middle text-end">
+                                                    <div class="union_img position-relative">
+                                                        <img class="union invisible"
+                                                             src="mate_elearning/static/description/Union_top2.png"/>
+                                                        <div class="number_union">
+                                                            8
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center position-relative content">
+                                                        <img src="mate_elearning/static/description/Ellipse 235 (2).png"/>
+                                                        <div class="flex-1 ms-3 text">
+                                                            <h6 class="mb-1">Olga Witting</h6>
+                                                            <p class="mb-0">Direct Accountability Architect</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+                                                <td class="align-middle pe-card">
+                                                    <div class="d-flex align-items-center float-right percent">
+                                                        <div class="fw-semi-bold ms-2 content_percent">64604pt</div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="align-middle text-end">
+                                                    <div class="union_img position-relative">
+                                                        <img class="union invisible"
+                                                             src="mate_elearning/static/description/Union_top2.png"/>
+                                                        <div class="number_union">
+                                                            9
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center position-relative content">
+                                                        <img src="mate_elearning/static/description/Ellipse 235 (3).png"/>
+                                                        <div class="flex-1 ms-3 text">
+                                                            <h6 class="mb-1">Johnny Trantow</h6>
+                                                            <p class="mb-0">Corporate Functionality Liaison</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+                                                <td class="align-middle pe-card">
+                                                    <div class="d-flex align-items-center float-right percent">
+                                                        <div class="fw-semi-bold ms-2 content_percent">58360pt</div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="align-middle text-end">
+                                                    <div class="union_img position-relative">
+                                                        <img class="union invisible"
+                                                             src="mate_elearning/static/description/Union_top2.png"/>
+                                                        <div class="number_union">
+                                                            10
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center position-relative content">
+                                                        <img src="mate_elearning/static/description/Ellipse 235 (4).png"/>
+                                                        <div class="flex-1 ms-3 text">
+                                                            <h6 class="mb-1">Mable Powlowski</h6>
+                                                            <p class="mb-0">Chief Web Assistant</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+                                                <td class="align-middle pe-card">
+                                                    <div class="d-flex align-items-center float-right percent">
+                                                        <div class="fw-semi-bold ms-2 content_percent">60172pt</div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col_card">
+                  <div class="card justify-content-between h-100 ranking_multiple">
+                      <div class="icon_global"><img src="mate_elearning/static/description/Vector (4).png"/></div>
+                      <h3>Tỷ lệ phòng ban tham gia đào tạo</h3>
+                      <div class="ranking_content">
+                          <div class="card overflow-hidden">
+                            <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table class="table table-dashboard mb-0">
+                                    <tbody>
+                                        <tr class="top5_train">
+                                            <td class="align-middle text-end">
+                                                <div class="union_img position-relative">
+                                                    <img class="union"
+                                                         src="mate_elearning/static/description/cup.5 1 (1).png"/>
+                                                </div>
+                                            </td>
+
+                                            <td class="align-middle">
+                                                <div class="d-flex align-items-center position-relative content">
+                                                    <img src="mate_elearning/static/description/raking_multiple_top_1.png"/>
+                                                    <div class="flex-1 ms-3 text">
+                                                        <h6 class="mb-1"></h6>
+                                                        <p class="mb-0"></p>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                            <td class="align-middle pe-card">
+                                                <div class="d-flex align-items-center float-right percent">
+                                                    <div class="fw-semi-bold ms-2 content_percent"></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="top5_train">
+                                                <td class="align-middle text-end">
+                                                    <div class="union_img position-relative">
+                                                        <img class="union"
+                                                             src="mate_elearning/static/description/cup.5 2 (1).png"/>
+                                                    </div>
+                                                </td>
+                                            <td class="align-middle ">
+                                                    <div class="d-flex align-items-center position-relative content">
+                                                        <img src="mate_elearning/static/description/raking_multiple_top_1.png"/>
+                                                        <div class="flex-1 ms-3 text">
+                                                            <h6 class="mb-1"></h6>
+                                                            <p class="mb-0">Amanda Spencer III</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+                                            <td class="align-middle pe-card">
+                                                    <div class="d-flex align-items-center float-right percent">
+                                                        <div class="fw-semi-bold ms-2 content_percent">76%</div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        <tr class="top5_train">
+                                                <td class="align-middle text-end">
+                                                    <div class="union_img position-relative">
+                                                        <img class="union"
+                                                             src="mate_elearning/static/description/cup.5 3 (1).png"/>
+                                                    </div>
+                                                </td>
+                                            <td class="align-middle ">
+                                                    <div class="d-flex align-items-center position-relative content">
+                                                        <img src="mate_elearning/static/description/raking_multiple_top_1.png"/>
+                                                        <div class="flex-1 ms-3 text">
+                                                            <h6 class="mb-1"></h6>
+                                                            <p class="mb-0">Nick Brakus</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+                                            <td class="align-middle pe-card">
+                                                    <div class="d-flex align-items-center float-right percent">
+                                                        <div class="fw-semi-bold ms-2 content_percent">64%</div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        <tr>
+                                                <td class="align-middle text-end">
+                                                    <div class="union_img position-relative">
+                                                        4
+                                                    </div>
+                                                </td>
+                                            <td class="align-middle ">
+                                                    <div class="d-flex align-items-center position-relative content">
+                                                        <img src="mate_elearning/static/description/raking_multiple_top_1.png"/>
+                                                        <div class="flex-1 ms-3 text">
+                                                            <h6 class="mb-1">Regina VonRueden</h6>
+                                                            <p class="mb-0">Chief Interactions Strategist</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+                                            <td class="align-middle pe-card">
+                                                    <div class="d-flex align-items-center float-right percent">
+                                                        <div class="fw-semi-bold ms-2 content_percent">52%</div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        <tr>
+                                            <td class="align-middle text-end">
+                                                <div class="union_img position-relative">
+                                                    5
+                                                </div>
+                                            </td>
+                                            <td class="align-middle">
+                                                <div class="d-flex align-items-center position-relative content">
+                                                    <img src="mate_elearning/static/description/raking_multiple_top_1.png"/>
+                                                    <div class="flex-1 ms-3 text">
+                                                        <h6 class="mb-1">Mrs. Jeannette Spencer</h6>
+                                                        <p class="mb-0">Investor Identity Technician</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                            <td class="align-middle pe-card">
+                                                <div class="d-flex align-items-center float-right percent">
+                                                    <div class="fw-semi-bold ms-2 content_percent">40%</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        </div>
+                      </div>
+                  </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col_card">
+                  <div class="card justify-content-between h-100 ranking_multiple">
+                      <div class="icon_global"><img src="mate_elearning/static/description/Vector (4).png"/></div>
+                      <h3>Tỷ lệ phòng ban tham gia kỳ thi</h3>
+                      <div class="ranking_content">
+                        <div class="card overflow-hidden">
+                            <div class="card-body p-0">
+                            <div class="table-responsive">
+                              <table class="table table-dashboard mb-0">
+                                    <tbody>
+                                        <tr class="top5_train">
+                                            <td class="align-middle text-end">
+                                                <div class="union_img position-relative">
+                                                    <img class="union"
+                                                         src="mate_elearning/static/description/cup.5 1 (1).png"/>
+                                                </div>
+                                            </td>
+
+                                            <td class="align-middle">
+                                                <div class="d-flex align-items-center position-relative content">
+                                                    <img src="mate_elearning/static/description/raking_multiple_top_1.png"/>
+                                                    <div class="flex-1 ms-3 text">
+                                                        <h6 class="mb-1"></h6>
+                                                        <p class="mb-0">Product Program Liaison</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                            <td class="align-middle pe-card">
+                                                <div class="d-flex align-items-center float-right percent">
+                                                    <div class="fw-semi-bold ms-2 content_percent">88%</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                                <td class="align-middle text-end">
+                                                    <div class="union_img position-relative">
+                                                        <img class="union"
+                                                             src="mate_elearning/static/description/cup.5 2 (1).png"/>
+                                                    </div>
+                                                </td>
+                                            <td class="align-middle ">
+                                                    <div class="d-flex align-items-center position-relative content">
+                                                        <img src="mate_elearning/static/description/raking_multiple_top_1.png"/>
+                                                        <div class="flex-1 ms-3 text">
+                                                            <h6 class="mb-1">Forward Division Specialist</h6>
+                                                            <p class="mb-0">Amanda Spencer III</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+                                            <td class="align-middle pe-card">
+                                                    <div class="d-flex align-items-center float-right percent">
+                                                        <div class="fw-semi-bold ms-2 content_percent">76%</div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        <tr>
+                                                <td class="align-middle text-end">
+                                                    <div class="union_img position-relative">
+                                                        <img class="union"
+                                                             src="mate_elearning/static/description/cup.5 3 (1).png"/>
+                                                    </div>
+                                                </td>
+                                            <td class="align-middle ">
+                                                    <div class="d-flex align-items-center position-relative content">
+                                                        <img src="mate_elearning/static/description/raking_multiple_top_1.png"/>
+                                                        <div class="flex-1 ms-3 text">
+                                                            <h6 class="mb-1">Senior Functionality Executive</h6>
+                                                            <p class="mb-0">Nick Brakus</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+                                            <td class="align-middle pe-card">
+                                                    <div class="d-flex align-items-center float-right percent">
+                                                        <div class="fw-semi-bold ms-2 content_percent">64%</div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        <tr>
+                                                <td class="align-middle text-end">
+                                                    <div class="union_img position-relative">
+                                                        4
+                                                    </div>
+                                                </td>
+                                            <td class="align-middle ">
+                                                    <div class="d-flex align-items-center position-relative content">
+                                                        <img src="mate_elearning/static/description/raking_multiple_top_1.png"/>
+                                                        <div class="flex-1 ms-3 text">
+                                                            <h6 class="mb-1">Regina VonRueden</h6>
+                                                            <p class="mb-0">Chief Interactions Strategist</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+                                            <td class="align-middle pe-card">
+                                                    <div class="d-flex align-items-center float-right percent">
+                                                        <div class="fw-semi-bold ms-2 content_percent">52%</div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        <tr>
+                                            <td class="align-middle text-end">
+                                                <div class="union_img position-relative">
+                                                    5
+                                                </div>
+                                            </td>
+                                            <td class="align-middle">
+                                                <div class="d-flex align-items-center position-relative content">
+                                                    <img src="mate_elearning/static/description/raking_multiple_top_1.png"/>
+                                                    <div class="flex-1 ms-3 text">
+                                                        <h6 class="mb-1">Mrs. Jeannette Spencer</h6>
+                                                        <p class="mb-0">Investor Identity Technician</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                            <td class="align-middle pe-card">
+                                                <div class="d-flex align-items-center float-right percent">
+                                                    <div class="fw-semi-bold ms-2 content_percent">40%</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col_card">
+                  <div class="card justify-content-between h-100 ranking_multiple">
+                      <div class="icon_global"><img src="mate_elearning/static/description/Vector (4).png"/></div>
+                      <h3>Top 5 khóa học có tỷ lệ tham gia nhiều nhất</h3>
+                      <div class="ranking_content">
+                        <div class="card overflow-hidden">
+                            <div class="card-body p-0">
+                            <div class="table-responsive">
+                              <table class="table table-dashboard mb-0">
+                                    <tbody>
+                                        <tr class="get_top_course_top1_class">
+                                            <td class="align-middle text-end">
+                                                <div class="union_img position-relative">
+                                                    <img class="union"
+                                                         src="mate_elearning/static/description/cup.5 1 (1).png"/>
+                                                </div>
+                                            </td>
+
+                                            <td class="align-middle">
+                                                <div class="d-flex align-items-center position-relative content">
+                                                    <img src="mate_elearning/static/description/raking_multiple_top_1.png"/>
+                                                    <div class="flex-1 ms-3 text">
+                                                        <h6 class="mb-1"></h6>
+                                                        <p class="mb-0"></p>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                            <td class="align-middle pe-card">
+                                                <div class="d-flex align-items-center float-right percent">
+                                                    <div class="fw-semi-bold ms-2 content_percent"></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="get_top_course_top2_class">
+                                                <td class="align-middle text-end">
+                                                    <div class="union_img position-relative">
+                                                        <img class="union"
+                                                             src="mate_elearning/static/description/cup.5 2 (1).png"/>
+                                                    </div>
+                                                </td>
+                                            <td class="align-middle ">
+                                                    <div class="d-flex align-items-center position-relative content">
+                                                        <img src="mate_elearning/static/description/raking_multiple_top_1.png"/>
+                                                        <div class="flex-1 ms-3 text">
+                                                            <h6 class="mb-1"></h6>
+                                                            <p class="mb-0"></p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+                                            <td class="align-middle pe-card">
+                                                    <div class="d-flex align-items-center float-right percent">
+                                                        <div class="fw-semi-bold ms-2 content_percent">76%</div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        <tr class="get_top_course_top3_class">
+                                                <td class="align-middle text-end">
+                                                    <div class="union_img position-relative">
+                                                        <img class="union"
+                                                             src="mate_elearning/static/description/cup.5 3 (1).png"/>
+                                                    </div>
+                                                </td>
+                                            <td class="align-middle ">
+                                                    <div class="d-flex align-items-center position-relative content">
+                                                        <img src="mate_elearning/static/description/raking_multiple_top_1.png"/>
+                                                        <div class="flex-1 ms-3 text">
+                                                            <h6 class="mb-1"></h6>
+                                                            <p class="mb-0"></p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+                                            <td class="align-middle pe-card">
+                                                    <div class="d-flex align-items-center float-right percent">
+                                                        <div class="fw-semi-bold ms-2 content_percent">64%</div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        <tr class="get_top_course_top4_class">
+                                                <td class="align-middle text-end">
+                                                    <div class="union_img position-relative">
+                                                        4
+                                                    </div>
+                                                </td>
+                                            <td class="align-middle ">
+                                                    <div class="d-flex align-items-center position-relative content">
+                                                        <img src="mate_elearning/static/description/raking_multiple_top_1.png"/>
+                                                        <div class="flex-1 ms-3 text">
+                                                            <h6 class="mb-1"></h6>
+                                                            <p class="mb-0"></p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+                                            <td class="align-middle pe-card">
+                                                    <div class="d-flex align-items-center float-right percent">
+                                                        <div class="fw-semi-bold ms-2 content_percent">52%</div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        <tr class="get_top_course_top5_class">
+                                            <td class="align-middle text-end">
+                                                <div class="union_img position-relative">
+                                                    5
+                                                </div>
+                                            </td>
+                                            <td class="align-middle">
+                                                <div class="d-flex align-items-center position-relative content">
+                                                    <img src="mate_elearning/static/description/raking_multiple_top_1.png"/>
+                                                    <div class="flex-1 ms-3 text">
+                                                        <h6 class="mb-1"></h6>
+                                                        <p class="mb-0"></p>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                            <td class="align-middle pe-card">
+                                                <div class="d-flex align-items-center float-right percent">
+                                                    <div class="fw-semi-bold ms-2 content_percent">40%</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col_card">
+                  <div class="card justify-content-between h-100 ranking_multiple">
+                      <div class="icon_global"><img src="mate_elearning/static/description/Vector (4).png"/></div>
+                      <h3>Top 5 kỳ thi có tỉ lệ tham gia nhiều nhất</h3>
+                      <div class="ranking_content">
+                        <div class="card overflow-hidden">
+                            <div class="card-body p-0">
+                            <div class="table-responsive">
+                              <table class="table table-dashboard mb-0">
+                                    <tbody>
+                                        <tr class="get_top_survey_exam_top1_class">
+                                            <td class="align-middle text-end">
+                                                <div class="union_img position-relative">
+                                                    <img class="union"
+                                                         src="mate_elearning/static/description/cup.5 1 (1).png"/>
+                                                </div>
+                                            </td>
+
+                                            <td class="align-middle">
+                                                <div class="d-flex align-items-center position-relative content">
+                                                    <img src="mate_elearning/static/description/raking_multiple_top_1.png"/>
+                                                    <div class="flex-1 ms-3 text">
+                                                        <h6 class="mb-1"></h6>
+                                                        <p class="mb-0"></p>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                            <td class="align-middle pe-card">
+                                                <div class="d-flex align-items-center float-right percent">
+                                                    <div class="fw-semi-bold ms-2 content_percent">88%</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="get_top_survey_exam_top2_class">
+                                                <td class="align-middle text-end">
+                                                    <div class="union_img position-relative">
+                                                        <img class="union"
+                                                             src="mate_elearning/static/description/cup.5 2 (1).png"/>
+                                                    </div>
+                                                </td>
+                                            <td class="align-middle ">
+                                                    <div class="d-flex align-items-center position-relative content">
+                                                        <img src="mate_elearning/static/description/raking_multiple_top_1.png"/>
+                                                        <div class="flex-1 ms-3 text">
+                                                            <h6 class="mb-1"></h6>
+                                                            <p class="mb-0"></p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+                                            <td class="align-middle pe-card">
+                                                    <div class="d-flex align-items-center float-right percent">
+                                                        <div class="fw-semi-bold ms-2 content_percent">76%</div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        <tr class="get_top_survey_exam_top3_class">
+                                                <td class="align-middle text-end">
+                                                    <div class="union_img position-relative">
+                                                        <img class="union"
+                                                             src="mate_elearning/static/description/cup.5 3 (1).png"/>
+                                                    </div>
+                                                </td>
+                                            <td class="align-middle ">
+                                                    <div class="d-flex align-items-center position-relative content">
+                                                        <img src="mate_elearning/static/description/raking_multiple_top_1.png"/>
+                                                        <div class="flex-1 ms-3 text">
+                                                            <h6 class="mb-1"></h6>
+                                                            <p class="mb-0"></p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+                                            <td class="align-middle pe-card">
+                                                    <div class="d-flex align-items-center float-right percent">
+                                                        <div class="fw-semi-bold ms-2 content_percent">64%</div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        <tr class="get_top_survey_exam_top4_class">
+                                                <td class="align-middle text-end">
+                                                    <div class="union_img position-relative">
+                                                        4
+                                                    </div>
+                                                </td>
+                                            <td class="align-middle ">
+                                                    <div class="d-flex align-items-center position-relative content">
+                                                        <img src="mate_elearning/static/description/raking_multiple_top_1.png"/>
+                                                        <div class="flex-1 ms-3 text">
+                                                            <h6 class="mb-1"></h6>
+                                                            <p class="mb-0"></p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+                                            <td class="align-middle pe-card">
+                                                    <div class="d-flex align-items-center float-right percent">
+                                                        <div class="fw-semi-bold ms-2 content_percent">52%</div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        <tr class="get_top_survey_exam_top5_class">
+                                            <td class="align-middle text-end">
+                                                <div class="union_img position-relative">
+                                                    5
+                                                </div>
+                                            </td>
+                                            <td class="align-middle">
+                                                <div class="d-flex align-items-center position-relative content">
+                                                    <img src="mate_elearning/static/description/raking_multiple_top_1.png"/>
+                                                    <div class="flex-1 ms-3 text">
+                                                        <h6 class="mb-1"></h6>
+                                                        <p class="mb-0"></p>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                            <td class="align-middle pe-card">
+                                                <div class="d-flex align-items-center float-right percent">
+                                                    <div class="fw-semi-bold ms-2 content_percent">40%</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col_card">
+                  <div class="card justify-content-between h-100 ranking_multiple">
+                      <div class="icon_global"><img src="mate_elearning/static/description/Vector (4).png"/></div>
+                      <h3>Top 5 khảo sát có tỷ lệ tham gia nhiều nhất</h3>
+                      <div class="ranking_content">
+                          <div class="card overflow-hidden">
+                              <div class="card-body p-0">
+                                  <div class="table-responsive">
+                                      <table class="table table-dashboard mb-0">
+                                          <tbody>
+                                                <tr class="get_top_survey_user_input_top1_class">
+                                                    <td class="align-middle text-end">
+                                                        <div class="union_img position-relative">
+                                                            <img class="union"
+                                                                 src="mate_elearning/static/description/cup.5 1 (1).png"/>
+                                                        </div>
+                                                    </td>
+
+                                                    <td class="align-middle">
+                                                        <div class="d-flex align-items-center position-relative content">
+                                                            <img src="mate_elearning/static/description/raking_multiple_top_1.png"/>
+                                                            <div class="flex-1 ms-3 text">
+                                                                <h6 class="mb-1"></h6>
+                                                                <p class="mb-0">Product Program Liaison</p>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                    <td class="align-middle pe-card">
+                                                        <div class="d-flex align-items-center float-right percent">
+                                                            <div class="fw-semi-bold ms-2 content_percent">88%</div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                              <tr class="get_top_survey_user_input_top2_class">
+                                                        <td class="align-middle text-end">
+                                                            <div class="union_img position-relative">
+                                                                <img class="union"
+                                                                     src="mate_elearning/static/description/cup.5 2 (1).png"/>
+                                                            </div>
+                                                        </td>
+                                                  <td class="align-middle ">
+                                                            <div class="d-flex align-items-center position-relative content">
+                                                                <img src="mate_elearning/static/description/raking_multiple_top_1.png"/>
+                                                                <div class="flex-1 ms-3 text">
+                                                                    <h6 class="mb-1"></h6>
+                                                                    <p class="mb-0"></p>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+
+                                                  <td class="align-middle pe-card">
+                                                            <div class="d-flex align-items-center float-right percent">
+                                                                <div class="fw-semi-bold ms-2 content_percent">76%</div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                              <tr class="get_top_survey_user_input_top3_class">
+                                                        <td class="align-middle text-end">
+                                                            <div class="union_img position-relative">
+                                                                <img class="union"
+                                                                     src="mate_elearning/static/description/cup.5 3 (1).png"/>
+                                                            </div>
+                                                        </td>
+                                                  <td class="align-middle ">
+                                                            <div class="d-flex align-items-center position-relative content">
+                                                                <img src="mate_elearning/static/description/raking_multiple_top_1.png"/>
+                                                                <div class="flex-1 ms-3 text">
+                                                                    <h6 class="mb-1">Senior Functionality Executive</h6>
+                                                                    <p class="mb-0">Nick Brakus</p>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+
+                                                  <td class="align-middle pe-card">
+                                                            <div class="d-flex align-items-center float-right percent">
+                                                                <div class="fw-semi-bold ms-2 content_percent">64%</div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                              <tr class="get_top_survey_user_input_top4_class">
+                                                        <td class="align-middle text-end">
+                                                            <div class="union_img position-relative">
+                                                                4
+                                                            </div>
+                                                        </td>
+                                                  <td class="align-middle ">
+                                                            <div class="d-flex align-items-center position-relative content">
+                                                                <img src="mate_elearning/static/description/raking_multiple_top_1.png"/>
+                                                                <div class="flex-1 ms-3 text">
+                                                                    <h6 class="mb-1">Regina VonRueden</h6>
+                                                                    <p class="mb-0">Chief Interactions Strategist</p>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+
+                                                  <td class="align-middle pe-card">
+                                                            <div class="d-flex align-items-center float-right percent">
+                                                                <div class="fw-semi-bold ms-2 content_percent">52%</div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                              <tr class="get_top_survey_user_input_top5_class">
+                                                    <td class="align-middle text-end">
+                                                        <div class="union_img position-relative">
+                                                            5
+                                                        </div>
+                                                    </td>
+                                                  <td class="align-middle">
+                                                        <div class="d-flex align-items-center position-relative content">
+                                                            <img src="mate_elearning/static/description/raking_multiple_top_1.png"/>
+                                                            <div class="flex-1 ms-3 text">
+                                                                <h6 class="mb-1">Mrs. Jeannette Spencer</h6>
+                                                                <p class="mb-0">Investor Identity Technician</p>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                  <td class="align-middle pe-card">
+                                                        <div class="d-flex align-items-center float-right percent">
+                                                            <div class="fw-semi-bold ms-2 content_percent">40%</div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                    </tbody>
+                                      </table>
+                                  </div>
+                        </div>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col_card">
+                  <div class="card justify-content-between h-100 ranking_multiple">
+                      <div class="icon_global"><img src="mate_elearning/static/description/Vector (4).png"/></div>
+                      <h3>Thống kê thư viện nội dung theo chủ đề</h3>
+                      <div class="ranking_content">
+                        <div class="card overflow-hidden">
+                            <div class="card-body p-0">
+                            <div class="table-responsive">
+                              <table class="table table-dashboard mb-0">
+                                    <tbody>
+                                        <tr class="top5_train">
+                                            <td class="align-middle text-end">
+                                                <div class="union_img position-relative">
+                                                    <img class="union"
+                                                         src="mate_elearning/static/description/cup.5 1 (1).png"/>
+                                                </div>
+                                            </td>
+
+                                            <td class="align-middle">
+                                                <div class="d-flex align-items-center position-relative content">
+                                                    <img src="mate_elearning/static/description/raking_multiple_top_1.png"/>
+                                                    <div class="flex-1 ms-3 text">
+                                                        <h6 class="mb-1"></h6>
+                                                        <p class="mb-0">Product Program Liaison</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                            <td class="align-middle pe-card">
+                                                <div class="d-flex align-items-center float-right percent">
+                                                    <div class="fw-semi-bold ms-2 content_percent">88%</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                                <td class="align-middle text-end">
+                                                    <div class="union_img position-relative">
+                                                        <img class="union"
+                                                             src="mate_elearning/static/description/cup.5 2 (1).png"/>
+                                                    </div>
+                                                </td>
+                                            <td class="align-middle ">
+                                                    <div class="d-flex align-items-center position-relative content">
+                                                        <img src="mate_elearning/static/description/raking_multiple_top_1.png"/>
+                                                        <div class="flex-1 ms-3 text">
+                                                            <h6 class="mb-1">Forward Division Specialist</h6>
+                                                            <p class="mb-0">Amanda Spencer III</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+                                            <td class="align-middle pe-card">
+                                                    <div class="d-flex align-items-center float-right percent">
+                                                        <div class="fw-semi-bold ms-2 content_percent">76%</div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        <tr>
+                                                <td class="align-middle text-end">
+                                                    <div class="union_img position-relative">
+                                                        <img class="union"
+                                                             src="mate_elearning/static/description/cup.5 3 (1).png"/>
+                                                    </div>
+                                                </td>
+                                            <td class="align-middle ">
+                                                    <div class="d-flex align-items-center position-relative content">
+                                                        <img src="mate_elearning/static/description/raking_multiple_top_1.png"/>
+                                                        <div class="flex-1 ms-3 text">
+                                                            <h6 class="mb-1">Senior Functionality Executive</h6>
+                                                            <p class="mb-0">Nick Brakus</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+                                            <td class="align-middle pe-card">
+                                                    <div class="d-flex align-items-center float-right percent">
+                                                        <div class="fw-semi-bold ms-2 content_percent">64%</div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        <tr>
+                                                <td class="align-middle text-end">
+                                                    <div class="union_img position-relative">
+                                                        4
+                                                    </div>
+                                                </td>
+                                            <td class="align-middle ">
+                                                    <div class="d-flex align-items-center position-relative content">
+                                                        <img src="mate_elearning/static/description/raking_multiple_top_1.png"/>
+                                                        <div class="flex-1 ms-3 text">
+                                                            <h6 class="mb-1">Regina VonRueden</h6>
+                                                            <p class="mb-0">Chief Interactions Strategist</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+                                            <td class="align-middle pe-card">
+                                                    <div class="d-flex align-items-center float-right percent">
+                                                        <div class="fw-semi-bold ms-2 content_percent">52%</div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        <tr>
+                                            <td class="align-middle text-end">
+                                                <div class="union_img position-relative">
+                                                    5
+                                                </div>
+                                            </td>
+                                            <td class="align-middle">
+                                                <div class="d-flex align-items-center position-relative content">
+                                                    <img src="mate_elearning/static/description/raking_multiple_top_1.png"/>
+                                                    <div class="flex-1 ms-3 text">
+                                                        <h6 class="mb-1">Mrs. Jeannette Spencer</h6>
+                                                        <p class="mb-0">Investor Identity Technician</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                            <td class="align-middle pe-card">
+                                                <div class="d-flex align-items-center float-right percent">
+                                                    <div class="fw-semi-bold ms-2 content_percent">40%</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 d-flex justify-content-center align-items-center footer">
+                <img src="mate_elearning/static/description/White.png" width="117.6px" height="56px"/>
+                <div class="border_footer"></div>
+                <p>Phiên bản V2.0</p>
+            </div>
+        </div>
+
+    </t>
+</templates>
